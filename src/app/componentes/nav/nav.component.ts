@@ -1,16 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { Alumno } from 'src/app/ts/backend';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class NavComponent implements OnInit {
-
-  constructor() { }
-
+  constructor() {
+  }
   ngOnInit(): void {
   }
-
 }

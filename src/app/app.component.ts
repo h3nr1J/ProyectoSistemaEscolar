@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sistemaEscolar';
-  public usuario:string = "dushan";
-  public contrasenia: string = "123";
 }
