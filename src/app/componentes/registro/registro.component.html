@@ -1,0 +1,95 @@
+
+<app-nav></app-nav>
+<h1>Bienvenido al Registro de Estudiante</h1>
+<div class="container-fluid">
+    <div class="mb-6 mx-auto mt-3 d-block p-1">
+        <label for="nombre-alumno">Nombre</label>
+        <input type="text" class="form-control form-control-sm " id="nombre-alumno" aria-describedby="nombreHelp"
+            [(ngModel)]="alumno.nombre" placeholder="Ingrese su nombre completo"><label for="correo-alumno">Apellido
+            Paterno </label>
+        <input type="ApellidoP" class="form-control form-control-sm" id="ApellidoP-alumno" aria-describedby="ApellidoPHelp"
+            [(ngModel)]="alumno.ApellidoPaterno" placeholder="Ingrese su Apellido Paterno"> <label for="correo-alumno">Apellido
+            Materno </label>
+        <input type="ApellidoP" class="form-control form-control-sm" id="ApellidoM-alumno" aria-describedby="ApellidoMHelp"
+            [(ngModel)]="alumno.ApellidoMaterno" placeholder="Ingrese su Apellido Materno"><label for="codigo-alumno">Codigo
+        </label>
+        <input type="text" class="form-control form-control-sm" id="codigo-alumno" aria-describedby="codigoHelp"
+            [(ngModel)]="alumno.codigo" placeholder="Ingrese su codigo "><label for="correo-alumno">Correo </label>
+        <input type="email" class="form-control" id="correo-alumno" aria-describedby="correoHelp"
+            [(ngModel)]="alumno.email" placeholder="Ingrese su correo">
+        <button type="submit" class="btn btn-primary mt-2" (click)="onDatos()">REGISTRAR</button>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <h2>Aqui puedes ver los registros de los estudiantes</h2>
+    <table class="table table-sm ">
+        <thead>
+            <tr>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">ApellidoPaterno</th>
+                <th scope="col">ApellidoMaterno</th>
+                <th scope="col">Correo</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let alumn of alumnos;index as i">
+                <td>{{alumn.codigo}}</td>
+                <td>{{alumn.nombre}}</td>
+                <td>{{alumn.ApellidoPaterno}}</td>
+                <td>{{alumn.ApellidoMaterno}}</td>
+                <td>{{alumn.email}}</td>
+                <td>
+                    <button type="button" class="btn btn-warning" (click)="onEditar(0)">EDITAR</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger" (click)="onEliminar(0)">ELIMINAR</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container-fluid">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Hora</th>
+                <th scope="col">Lunes</th>
+                <th scope="col">Martes</th>
+                <th scope="col">Miercoles</th>
+                <th scope="col">Jueves</th>
+                <th scope="col">Viernes</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{curso.primero}}</td>
+                <td>{{curso.segundo}}</td>
+                <td>{{curso.tercero}}</td>
+                <td>{{curso.cuarto}}</td>
+                <td>{{curso.quinto}}</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>{{curso.segundo}}</td>
+                <td>{{curso.cuarto}}</td>
+                <td>{{curso.quinto}}</td>
+                <td>{{curso.primero}}</td>
+                <td>{{curso.cuarto}}</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>{{curso.cuarto}}</td>
+                <td>{{curso.tercero}}</td>
+                <td>{{curso.primero}}</td>
+                <td>{{curso.segundo}}</td>
+                <td>{{curso.tercero}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
