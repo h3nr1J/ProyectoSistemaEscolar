@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './componentes/login/login.component';
 import { NavComponent } from './componentes/nav/nav.component';
-import { NotasComponent } from './componentes/notas/notas.component';
 import { HorarioComponent } from './componentes/horario/horario.component';
+import { AsistenciaComponent } from './componentes/asistencia/asistencia.component';
+import { NotasComponent } from './componentes/notas/notas.component';
 
 const routes: Routes = [
   {
@@ -19,12 +20,16 @@ const routes: Routes = [
     component: NavComponent
   },
   {
-    path: 'notas',
-    component: NotasComponent
-  },
-  {
     path: 'horario',
     component : HorarioComponent
+  },
+  {
+    path: 'asistencia',
+    component: AsistenciaComponent
+  },
+  {
+    path: 'notas',
+    component: NotasComponent
   }
 ];
 
