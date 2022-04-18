@@ -54,16 +54,18 @@ export class RegistroComponent implements OnInit {
   // }
   public posicion:number = -1;
 
-  onEditar(i:number) {
-    let seleccion: RAlumno = this.alumnos[i];
-    this.alumno.codigo = seleccion.codigo;
-    this.alumno.nombre = seleccion.nombre;
-    this.alumno.ApellidoPaterno = seleccion.ApellidoPaterno;
-    this.alumno.ApellidoMaterno = seleccion.ApellidoMaterno;
-    this.alumno.email = seleccion.email;
-    this.posicion = i;
-  }
   onEliminar(i: number): void {
     this.alumnos.splice(i, 1);
+  }
+  onModificar(i: number): void{
+    let selecion: RAlumno = this.alumnos[i];
+    
+    this.alumno.nombre = selecion.nombre;
+    this.alumno.ApellidoMaterno = selecion.ApellidoMaterno;
+    this.alumno.ApellidoPaterno = selecion.ApellidoPaterno;
+    this.alumno.codigo = selecion.codigo;
+
+
+    this.posicion = i;
   }
 }
