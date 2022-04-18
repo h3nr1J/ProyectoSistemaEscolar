@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './componentes/nav/nav.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { HorarioComponent } from './componentes/horario/horario.component';
 import { AsistenciaComponent } from './componentes/asistencia/asistencia.component';
 import { NotasComponent } from './componentes/notas/notas.component';
 @NgModule({
@@ -14,7 +13,6 @@ import { NotasComponent } from './componentes/notas/notas.component';
     AppComponent,
     NavComponent,
     LoginComponent,
-    HorarioComponent,
     AsistenciaComponent,
     NotasComponent,
   ],

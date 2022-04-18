@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
   public DatosCorrectos:boolean = false;
   validar(form: FormGroup):void{
     if(buscar(this.alumnos, this.login.value.usuario,this.login.value.contrasenia) > -1){
-      this.router.navigate(['nav']);
+      this.router.navigate(['asistencia']);
     }
     else{
       console.log("datos incorrectos")

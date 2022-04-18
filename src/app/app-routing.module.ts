@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './componentes/login/login.component';
 import { NavComponent } from './componentes/nav/nav.component';
-import { HorarioComponent } from './componentes/horario/horario.component';
 import { AsistenciaComponent } from './componentes/asistencia/asistencia.component';
 import { NotasComponent } from './componentes/notas/notas.component';
 
@@ -18,10 +17,6 @@ const routes: Routes = [
   {
     path: 'nav',
     component: NavComponent
-  },
-  {
-    path: 'horario',
-    component : HorarioComponent
   },
   {
     path: 'asistencia',
